@@ -1,0 +1,88 @@
+[
+  {
+    "product_id": "A1B2C3D4",
+    "name": "Basmati Rice 5kg",
+    "category": "Grocery",
+    "price": 1850.0,
+    "quantity": 42,
+    "reorder_level": 10,
+    "description": "Long-grain aged basmati rice.",
+    "total_value": 77700.0,
+    "stock_status": "In stock",
+    "type": "standard"
+  },
+  {
+    "product_id": "E5F6A7B8",
+    "name": "Fresh Milk 1L",
+    "category": "Dairy",
+    "price": 260.0,
+    "quantity": 4,
+    "reorder_level": 12,
+    "description": "Full-cream pasteurised milk.",
+    "total_value": 1040.0,
+    "stock_status": "Low stock",
+    "type": "perishable",
+    "expiry_date": "2026-11-20"
+  },
+  {
+    "product_id": "C9D0E1F2",
+    "name": "USB-C Cable",
+    "category": "Electronics",
+    "price": 650.0,
+    "quantity": 0,
+    "reorder_level": 8,
+    "description": "1 metre braided charging cable.",
+    "total_value": 0.0,
+    "stock_status": "Out of stock",
+    "type": "standard"
+  },
+  {
+    "product_id": "13A4B5C6",
+    "name": "A4 Paper Ream",
+    "category": "Stationery",
+    "price": 1250.0,
+    "quantity": 7,
+    "reorder_level": 10,
+    "description": "500 sheets, 80gsm.",
+    "total_value": 8750.0,
+    "stock_status": "Low stock",
+    "type": "standard"
+  },
+  {
+    "product_id": "D7E8F9A0",
+    "name": "Yogurt 500g",
+    "category": "Dairy",
+    "price": 220.0,
+    "quantity": 25,
+    "reorder_level": 10,
+    "description": "Plain set yogurt.",
+    "total_value": 5500.0,
+    "stock_status": "In stock",
+    "type": "perishable",
+    "expiry_date": "2026-11-25"
+  },
+  {
+    "product_id": "69C5536B",
+    "name": "oat milk",
+    "category": "coffe",
+    "price": 0.0,
+    "quantity": 0,
+    "reorder_level": 5,
+    "description": "",
+    "total_value": 0.0,
+    "stock_status": "Out of stock",
+    "type": "standard"
+  },
+  {
+    "product_id": "2BB902DB",
+    "name": "lipstick",
+    "category": "makeup",
+    "price": 4000.0,
+    "quantity": 2,
+    "reorder_level": 5,
+    "description": "Experience bold, true\u2011color payoff with our lipstick, crafted for a silky\u2011smooth glide that stays vibrant throughout the day. Its creamy formula hydrates while delivering a comfortable, long\u2011lasting finish, making it a must\u2011have for any makeup collection. Priced at\u202f\u20b94,000, it offers premium performance without compromise.",
+    "total_value": 8000.0,
+    "stock_status": "Low stock",
+    "type": "standard"
+  }
+]

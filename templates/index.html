@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stockwise - Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>Stockwise</h1>
+    <p>Track stock, spot shortages, and get AI advice on what to reorder.</p>
+  </div>
+  <span id="aiBadge" class="badge">Checking AI...</span>
+</header>
+
+<main>
+  <section class="stats" id="stats"></section>
+
+  <div class="grid">
+    <section class="card" id="formCard">
+      <h2 id="formTitle">Add a product</h2>
+      <form id="productForm" novalidate>
+        <input type="hidden" id="productId">
+        <label>Name<input id="name" required></label>
+        <label>Category<input id="category" required></label>
+        <div class="row">
+          <label>Price (PKR)<input id="price" type="number" min="0" step="0.01" value="0"></label>
+          <label>Quantity<input id="quantity" type="number" min="0" step="1" value="0"></label>
+          <label>Reorder level<input id="reorder_level" type="number" min="0" step="1" value="5"></label>
+        </div>
+        <label>Type
+          <select id="type"><option value="standard">Standard</option><option value="perishable">Perishable</option></select>
+        </label>
+        <label id="expiryWrap" hidden>Expiry date<input id="expiry_date" type="date"></label>
+        <label>Description<textarea id="description" rows="3"></textarea></label>
+        <div class="actions">
+          <button type="submit" class="btn primary" id="saveBtn">Add product</button>
+          <button type="button" class="btn" id="aiDescBtn">Write description with AI</button>
+          <button type="button" class="btn ghost" id="cancelBtn" hidden>Cancel edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>AI inventory intelligence</h2>
+      <div class="actions">
+        <button class="btn primary" id="analyzeBtn">Analyze inventory</button>
+        <button class="btn" id="reorderBtn">Suggest reorders</button>
+      </div>
+      <form id="askForm" class="ask">
+        <input id="question" placeholder="Ask: which products are running low?">
+        <button class="btn primary" type="submit">Ask</button>
+      </form>
+      <div id="aiOutput" class="ai-out" aria-live="polite">AI answers appear here.</div>
+    </section>
+  </div>
+
+  <section class="card">
+    <div class="list-head">
+      <h2>Inventory</h2>
+      <input id="search" type="search" placeholder="Search by name, ID or category">
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ID</th><th>Product</th><th>Category</th><th>Price</th><th>Qty</th><th>Value</th><th>Status</th><th></th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<div id="toast" class="toast" role="status"></div>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
